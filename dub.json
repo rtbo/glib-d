@@ -1,7 +1,8 @@
 {
-	"name": "glib-d",
-	"description": "static bindings to GLib, including GObject",
-	"copyright": "Copyright (c) 2015, Remi Thebault",
-	"authors": ["Remi Thebault"],
+    "name": "glib-d",
+    "description": "static bindings to GLib, including GObject",
+    "copyright": "Copyright (c) 2015, Remi Thebault",
+    "license": "BSL-1.0",
+    "authors": ["Remi Thebault"],
     "targetType": "library"
 }
