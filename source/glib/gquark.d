@@ -7,6 +7,7 @@ module glib.gquark;
 
 import glib.gtypes;
 
+import std.string : format;
 
 alias GQuark = guint32;
 
@@ -29,12 +30,14 @@ extern (C) {
 // TODO: check this
 mixin template G_DEFINE_QUARK(string QN, string q_n)
 {
-    mixin("extern(C) GQuark "~q_n~"_quark() {"~
-            "static GQuark q;"
-            "if (q==0) "
-            "  q = g_quark_from_static_string(\""~QN~"\");"
-            "return q;"
-          "}");
+    mixin(q{
+        extern(C) GQuark %s_quark() {
+            static GQuark q;
+            if (q==0)
+                q = g_quark_from_static_string("%s");
+            return q;
+        }
+    }.format(q_n, QN));
 }
 //#define G_DEFINE_QUARK(QN, q_n)                                         \
 //    GQuark                                                                  \

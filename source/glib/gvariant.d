@@ -41,13 +41,13 @@ enum GVariantClass
 
 struct GVariantIter {
   /*< private >*/
-  gsize x[16];
+  gsize[16] x;
 }
 
 
 struct GVariantBuilder {
   /*< private >*/
-  gsize x[16];
+  gsize[16] x;
 }
 
 enum GVariantParseError
@@ -76,7 +76,7 @@ enum GVariantParseError
 
 struct GVariantDict {
   /*< private >*/
-  gsize x[16];
+  gsize[16] x;
 }
 
 extern (C) {
