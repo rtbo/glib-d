@@ -165,7 +165,7 @@ extern (C) {
                          const(GValue) *value1,
                          const(GValue) *value2) values_cmp;
       /*< private >*/
-      gpointer	  dummy[4];
+      gpointer[4]	  dummy;
     }
 
 

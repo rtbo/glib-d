@@ -749,7 +749,7 @@ struct GParamSpecVariant
   GVariant     *default_value;
 
   /*< private >*/
-  gpointer      padding[4];
+  gpointer[4]      padding;
 }
 
 
